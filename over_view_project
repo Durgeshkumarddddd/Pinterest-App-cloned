@@ -1,0 +1,40 @@
+/**
+ * 1.login and register screen
+ * 2.profile-profile page with boards {Authentication and authorization ,create multer.js}
+ * 3.feed = feed page with all different pins
+ * 4./save/:pinid - save karenge pin ko kisi board 
+ * 5./delete/:pinid-delete karenge pin ko kisi board se
+ * 6.logout
+ * 7.edit
+ * 8.upload
+ 
+
+Authentication and authorization code 
+
+Code for index .js File 
+code for logout
+>   app.get("/logout", function(req,res, next){
+    req.logout(function(err){
+        if(err){return next(err);}
+        res.redirect("/");
+    })
+});
+
+code for IsloggedIn Middleware 
+
+function isLoggedIn(req,res ,next ){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/");
+}
+
+logout 
+router.get("/logout", function(req, res, next){
+    req.logout(function(err){
+        if(err){return next(err);}
+        res.redirect("/");
+    })
+});
+
+*/
